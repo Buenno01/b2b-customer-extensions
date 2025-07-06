@@ -1,7 +1,5 @@
 import {
-    reactExtension,
     BlockStack,
-    InlineLayout,
     Text,
     ToggleButton,
     ToggleButtonGroup,
@@ -19,8 +17,8 @@ export const LocationList = ({ locations, selectedLocationId, onChange }: { loca
             {locations.map((location) => (
                 <ToggleButton id={location.id}>
                     <View
-                        blockAlignment="left"
-                        inlineAlignment="left"
+                        blockAlignment="start"
+                        inlineAlignment="start"
                         minBlockSize="fill"
                     >
                         <Text size="small" emphasis="bold">{location.name}</Text>
