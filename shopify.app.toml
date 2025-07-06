@@ -3,11 +3,12 @@
 client_id = "8183bae391d540f1ec0ab3c7b0f13933"
 name = "B2B customer extensions"
 handle = "b2b-customer-extensions"
-application_url = "https://example.com/"
+application_url = "https://localhost:3458"
 embedded = true
 
 [build]
 include_config_on_deploy = true
+automatically_update_urls_on_dev = true
 
 [webhooks]
 api_version = "2025-07"
@@ -22,10 +23,10 @@ api_version = "2025-07"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "write_customers, customer_read_customers"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = ["https://localhost:3458/auth/callback", "https://localhost:3458/auth/shopify/callback", "https://localhost:3458/api/auth/callback"]
 
 [pos]
 embedded = false
